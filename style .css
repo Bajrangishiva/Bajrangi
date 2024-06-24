@@ -1,0 +1,262 @@
+nav{
+  display:flex;
+ }
+ .nav1{
+  height: 50px;
+  width: 100px;
+  position: relative;
+  border-radius: 23px;
+  background-color: blueviolet;
+  overflow: hidden;
+  padding-bottom: 12px;
+ }
+ .nav1 h1:hover{
+  color: darkgreen;
+  z-index: 9;
+  position: relative;
+ }
+ .nav1::after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: orange;
+  bottom: -100%;
+  left: 0%;
+  transition: all ease 0.5s;
+  border-radius: 23px;
+ }
+ .nav1:hover::after{
+bottom: 0%;
+position: absolute;
+border-radius: 23px;
+
+ }video{
+  width: 100%;
+  height: 100%;
+ }
+ .moving{
+  white-space:nowrap;
+  overflow:auto;
+ }
+ .moving::-webkit-scrollbar{
+  display: none;
+ }
+  .moving h1{
+    display:inline-block;
+     
+    font-size: 9vw;
+  }
+  .gola{
+       height:20px;
+       width: 20px;
+       background-color: orange;
+       border-radius: 50%;
+       display: inline-block;
+       margin-bottom: 20px;
+       margin-left: 24px;
+  }
+  .con{
+     white-space: nowrap;
+     display: inline-block;
+     animation-name: annimate;
+     animation-timing-function:linear;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+  }
+  @keyframes annimate{
+    form{
+      transform: translateX(0%);
+    }
+    to{
+      transform: translateX(-100%);
+    }
+  }
+  .overlay{
+    height:40px;
+    width: 100%;
+    background-color: orange;
+    top:-30%;
+    position:absolute;
+  }
+  .first1.overlay:hover{
+    top:0%;
+  }
+   .items{
+     
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid black;
+    overflow: hidden;
+   }
+   .over{
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+    position: absolute;
+    top:-100%;
+    transition: all ease 0.3s;
+     
+    left: 0;
+
+  }
+  .items:hover .over{
+    top: 0%;
+  }
+  h1{
+    z-index: 9;
+    position: relative;
+    left: 12px;
+  }
+   .divimage{
+    height: 200px;
+    width: 200px;
+    border-radius: 12px;
+    top:45%;
+    left:50%;
+    z-index: 99;
+    position: fixed;
+    display: none;
+    background-position: center;
+    background-size: cover;
+     }
+   .conten1{
+    width: 200px;
+    height: 20px;
+    position: relative;
+    background-color: aquamarine;
+    border-radius: 12px;
+    text-align: center;
+    align-content: center;
+
+   } 
+    
+   .conten1::after{
+    content: "";
+    height: 100%;
+    width: 0%; 
+    position: absolute;
+    background-color: rgb(165, 126, 42);
+    left: 0%;
+    bottom: -100%;
+    border-radius: 12px;
+    transition: all ease 0.3s;
+   }
+   .conten1:hover::after{
+    width: 100%;
+   }
+   img{
+     filter: drop-shadow( 90px 12px 20px  );
+   }
+   img:hover{
+    transform: scale(1.5);
+    transition: all ease-in 0.8s;
+    transition: all ease-out 0.8s;
+   }
+   p::selection{
+    color: rgb(88, 18, 219);
+    background-color: rgb(21, 251, 21);
+   }
+    
+   .circle1{
+    background-color: aqua;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    align-content: center;
+    position: relative;
+    z-index: 99;
+    overflow: hidden;
+   }
+   .circle1::after{
+       content:"";
+       width: 200px;
+       height: 200px;
+       border-radius: 50%;
+       position: absolute;
+       background-color:red;
+       left: 0%;
+       top: 0%;
+       overflow: hidden;
+   }
+    .hapta{
+      clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+      width: 200px;
+      height: 200px;
+      background-color: antiquewhite;
+       background-size: cover;
+       border:5px linear-gradient(red,green,yellow);
+    }
+    
+     pre{
+      font-size: 40px;
+      font-weight: bold;
+      -webkit-text-stroke: 2px red;
+    }
+    /* counter number section  */
+    /* counter number section  */
+    * {
+      box-sizing: border-box;
+    }
+   /* Float four columns side by side */
+  
+   .column {
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+  }
+  
+  .row {
+    margin: 0 -5px;
+    position: relative;
+    }
+
+  
+  /* Clear floats after the columns */
+   
+  .row::before {
+    content: "SOME FUN FACTS ABOUT OUR AGENCY?";
+    display: table;
+    clear: both;
+    position: absolute;
+    left: 40%;
+    bottom: 40px;
+    color: #ABABAB;
+    font-family: Raleway,Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 14px;
+    word-wrap: break-word;
+     
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: inline;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #faf7f7;
+    color:rgb(87, 140, 41);
+  }
+  
+  .fa {font-size:50px;}
+
+  .num{
+    font-size: 50px;
+    color: aqua;
+  }
+  .contertext{
+    color: #777777;
+  }
+ 
